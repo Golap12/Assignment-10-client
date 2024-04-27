@@ -5,6 +5,7 @@ import logo from "../../assets/images/logo.png";
 import avatar from "../../assets/images/avatar.jpg";
 import { FiUser } from "react-icons/fi";
 import { PiSignOutFill } from "react-icons/pi";
+import { BiSolidUserPlus } from "react-icons/bi";
 
 
 const Nav = () => {
@@ -155,7 +156,7 @@ const Nav = () => {
                         :
 
                         <div className="md:hidden dropdown dropdown-bottom dropdown-end">
-                            <div tabIndex={0} role="button" className="p-5 rounded-full m-1">Join US</div>
+                            <div tabIndex={0} role="button" className="p-5 rounded-full m-1 flex justify-center items-center"><span><BiSolidUserPlus size={30}></BiSolidUserPlus></span><span>Join US</span></div>
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <Link to={"/login"} className="md:hidden  font-semibold flex items-center gap-2">
                                     <span> <FiUser size={0}></FiUser></span><span>Login</span>
@@ -227,7 +228,7 @@ const Nav = () => {
                 ) : (
 
                     <div className="dropdown dropdown-bottom dropdown-end ">
-                        <div tabIndex={0} role="button" className="btn m-1 text-xl font-bold">Join US</div>
+                        <div tabIndex={0} role="button" className="btn m-1 text-xl font-bold flex justify-center items-center"><span><BiSolidUserPlus size={30}></BiSolidUserPlus></span><span>Join US</span></div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                             <Link
                                 to={"/login"}
