@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext, useState } from 'react';
 import { Tower } from './../../providers/AuthProvider';
-import logo from "../../assets/images/logo.png";
+// import logo from "../../assets/images/logo.png";
 import avatar from "../../assets/images/avatar.jpg";
 import { FiUser } from "react-icons/fi";
 import { PiSignOutFill } from "react-icons/pi";
@@ -22,8 +22,8 @@ const Nav = () => {
                 <NavLink
                     className={({ isActive }) =>
                         isActive
-                            ? "md:text-lg text-[12px] p-1 border-b-2 border-cyan-500 text-[#1f6b69] md:font-bold"
-                            : "text-[#1f6b69] md:text-lg text-[12px] p-1 md:font-bold hover:text-[#5fd1cd] hover:ease-in duration-300"
+                            ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
+                            : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
                     }
                     to="/"
                 >
@@ -35,8 +35,8 @@ const Nav = () => {
                 <NavLink
                     className={({ isActive }) =>
                         isActive
-                            ? "md:text-lg text-[12px] p-1 border-b-2 border-cyan-500 text-[#1f6b69] md:font-bold"
-                            : "text-[#1f6b69] md:text-lg text-[12px] p-1 md:font-bold hover:text-[#5fd1cd] hover:ease-in duration-300"
+                        ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
+                        : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
                     }
                     to="/allCraft"
                 >
@@ -48,8 +48,8 @@ const Nav = () => {
                 <NavLink
                     className={({ isActive }) =>
                         isActive
-                            ? "md:text-lg text-[12px] p-1 border-b-2 border-cyan-500 text-[#1f6b69] md:font-bold"
-                            : "text-[#1f6b69] md:text-lg text-[12px] p-1 md:font-bold hover:text-[#5fd1cd] hover:ease-in duration-300"
+                        ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
+                        : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
                     }
                     to="/addItem"
                 >
@@ -61,8 +61,8 @@ const Nav = () => {
                 <NavLink
                     className={({ isActive }) =>
                         isActive
-                            ? "md:text-lg text-[12px] p-1 border-b-2 border-cyan-500 text-[#1f6b69] md:font-bold"
-                            : "text-[#1f6b69] md:text-lg text-[12px] p-1 md:font-bold hover:text-[#5fd1cd] hover:ease-in duration-300"
+                        ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
+                        : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
                     }
                     to="/myList"
                 >
@@ -74,8 +74,8 @@ const Nav = () => {
                 <NavLink
                     className={({ isActive }) =>
                         isActive
-                            ? "md:text-lg text-[12px] p-1 border-b-2 border-cyan-500 text-[#1f6b69] md:font-bold "
-                            : "text-[#1f6b69] md:text-lg text-[12px] p-1 md:font-bold hover:text-[#5fd1cd] hover:ease-in duration-300"
+                        ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
+                        : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
                     }
                     to="/about"
                 >
@@ -87,8 +87,8 @@ const Nav = () => {
                 <NavLink
                     className={({ isActive }) =>
                         isActive
-                            ? "md:text-lg text-[12px] p-1 border-b-2 border-cyan-500 text-[#1f6b69] md:font-bold "
-                            : "text-[#1f6b69] md:text-lg text-[12px] p-1 md:font-bold hover:text-[#5fd1cd] hover:ease-in duration-300"
+                        ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
+                        : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
                     }
                     to="/contact"
                 >
@@ -129,7 +129,7 @@ const Nav = () => {
                 <Link
                     to={"/"}
                     className=" text-4xl text-[#131313] font-bold">
-                    <img className="h-[40px]" src={logo} alt="" />
+                    <p>Gra<span className="text-red-600">vo</span></p>
                 </Link>
 
                 {
@@ -156,8 +156,8 @@ const Nav = () => {
                         :
 
                         <div className="md:hidden dropdown dropdown-bottom dropdown-end">
-                            <div tabIndex={0} role="button" className="p-5 rounded-full m-1 flex justify-center items-center"><span><BiSolidUserPlus size={30}></BiSolidUserPlus></span><span>Join US</span></div>
-                            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <div tabIndex={0} role="button" className="flex justify-center items-center gap-1"><span><BiSolidUserPlus size={30}></BiSolidUserPlus></span></div>
+                            <ul tabIndex={0} className="dropdown-content z-[1] menu shadow bg-base-100  w-52">
                                 <Link to={"/login"} className="md:hidden  font-semibold flex items-center gap-2">
                                     <span> <FiUser size={0}></FiUser></span><span>Login</span>
                                 </Link>
@@ -213,7 +213,7 @@ const Nav = () => {
 
                         <ul
 
-                            className="p-2 flex flex-col items-center bg-[#1f6b69] hover:bg-[#1f6b694a] hover:text-[#1f6b69] hover:transition-all text-white hover:bg-[#2f6b7e duration-300 text-center font-bold rounded-lg"
+                            className="p-2 flex flex-col items-center bg-red-500 hover:bg-red-700 hover:transition-all text-white hover:bg-[#2f6b7e duration-300 text-center font-bold rounded-lg"
                         >
                             <li className="absolute text-gray-600 top-[45px] right-[30px] w-[150px] ">
                                 {isHovering ? user.displayName : null}
@@ -228,7 +228,7 @@ const Nav = () => {
                 ) : (
 
                     <div className="dropdown dropdown-bottom dropdown-end ">
-                        <div tabIndex={0} role="button" className="btn m-1 text-xl font-bold flex justify-center items-center"><span><BiSolidUserPlus size={30}></BiSolidUserPlus></span><span>Join US</span></div>
+                        <div tabIndex={0} role="button" className="btn text-xl font-bold flex justify-center items-center hover:bg-red-500 hover:text-white hover:ease-in duration-300"><span><BiSolidUserPlus size={30}></BiSolidUserPlus></span><span>Join US</span></div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                             <Link
                                 to={"/login"}

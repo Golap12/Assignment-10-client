@@ -23,6 +23,7 @@ const router = createBrowserRouter([
         {
           path: "/",
           element: <Home></Home>,
+          loader: () => fetch('http://localhost:5000/homeData')
         },
         {
           path: "/details/:id",
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
         {
           path: "/allCraft",
           element: <AllArtAndCrafts></AllArtAndCrafts>,
+          loader: () => fetch('http://localhost:5000/addeditems')
         },
         {
           path: "/addItem",
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
         {
           path: "/myList",
           element: <PrivetRoute><MyArtAndCraftList></MyArtAndCraftList></PrivetRoute>,
+        },
+        {
+          path: "/details",
+          element: <PrivetRoute><Details></Details></PrivetRoute>,
         },
         {
           path: "/register",
