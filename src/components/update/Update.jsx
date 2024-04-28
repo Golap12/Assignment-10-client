@@ -1,9 +1,12 @@
 import { useContext, useState } from "react";
 import { Tower } from "../../providers/AuthProvider";
-import Swal from 'sweetalert2'
+import { useLoaderData } from "react-router-dom";
+// import Swal from "sweetalert2";
+// import { FiEdit } from "react-icons/fi";
 
+const Update = () => {
 
-const AddCraftItem = () => {
+    const updateItem = useLoaderData();
 
 
     const { user } = useContext(Tower);
@@ -12,57 +15,57 @@ const AddCraftItem = () => {
 
 
 
-    const handleAdd = (e) => {
-        e.preventDefault();
+    // const handleUpdate = (e) => {
+    //     e.preventDefault();
 
-        const form = new FormData(e.currentTarget);
-        const subcategory_Name = form.get("subcategory_Name");
-        const item_name = form.get("item_name");
-        const shortDescription = form.get("shortDescription");
-        const price = form.get("price");
-        const rating = form.get("rating");
-        const customization = form.get("customization");
-        const processing_time = form.get("processing_time");
-        const stockStatus = form.get("stockStatus");
-        const photoURL = form.get("photoUrl");
-        const user_Name = form.get("userName")
-        const email = form.get("email");
+    //     const form = new FormData(e.currentTarget);
+    //     const subcategory_Name = form.get("subcategory_Name");
+    //     const item_name = form.get("item_name");
+    //     const shortDescription = form.get("shortDescription");
+    //     const price = form.get("price");
+    //     const rating = form.get("rating");
+    //     const customization = form.get("customization");
+    //     const processing_time = form.get("processing_time");
+    //     const stockStatus = form.get("stockStatus");
+    //     const photoURL = form.get("photoUrl");
+    //     const user_Name = form.get("userName")
+    //     const email = form.get("email");
+
+    //     const newUpdateItem = {
+    //         subcategory_Name, item_name, shortDescription, price, rating, customization, processing_time, stockStatus, photoURL, user_Name, email
+    //     }
+    //     console.log(newUpdateItem);
 
 
-        const newAddItem = {
-            subcategory_Name, item_name, shortDescription, price, rating, customization, processing_time, stockStatus, photoURL, user_Name, email
-        }
-        
 
 
-        // send data to the server
+    //     fetch(`http://localhost:5000/addeditems/${card._id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(newUpdateItem)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             if (data.insertedId) {
+    //                 Swal.fire({
+    //                     title: 'Success!',
+    //                     text: 'Item Update Successfully',
+    //                     icon: 'success',
+    //                     confirmButtonText: 'Go Back'
+    //                 })
+    //             }
+    //         })
+    // }
 
-        fetch('http://localhost:5000/addeditems', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newAddItem)
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.insertedId) {
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Item Added Successfully',
-                        icon: 'success',
-                        confirmButtonText: 'Go Back'
-                    })
-                }
-            })
-    }
 
 
     return (
         <div>
             <div className="max-w-[1000px] md:w-3/4  mt-10 mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
-                <h2 className="text-2xl font-bold mb-4 text-center">Add Art and Craft Item</h2>
-                <form onSubmit={handleAdd}>
+                <h2 className="text-2xl font-bold mb-4 text-center">Update Art and Craft Item</h2>
+                <form>
                     {/* Sub Category */}
                     <div className="mb-4">
                         <label htmlFor="subcategory" className="block font-medium mb-1">Sub Category Name</label>
@@ -157,11 +160,11 @@ const AddCraftItem = () => {
                     </div>
 
                     {/* Submit button */}
-                    <button type="submit" className="w-full bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">ADD</button>
+                    <button type="submit" className="w-full bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">Update</button>
                 </form>
             </div>
         </div>
     );
 };
 
-export default AddCraftItem;
+export default Update;

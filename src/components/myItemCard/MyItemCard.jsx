@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
 import { MdDeleteForever } from "react-icons/md";
-import { FiEdit } from "react-icons/fi";
+
 import { FaStar } from "react-icons/fa";
 import { CiEdit } from "react-icons/ci";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
+
 
 
 const MyItemCard = ({ card }) => {
-    console.log(card);
+
 
 
     const handleDelete = (_id) => {
@@ -20,29 +22,26 @@ const MyItemCard = ({ card }) => {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-              
-              fetch(`http://localhost:5000/addedItems/${_id}`, {
-                method: "DELETE"
-              })
-              .then(res=> res.json())
-              .then(data => {
-                console.log(data);
-                if(data.deletedCount > 0){
-                    Swal.fire({
-                        title: "Deleted!",
-                        text: "Your file has been deleted.",
-                        icon: "success"
-                      });
-                }
-              })
+
+                fetch(`http://localhost:5000/addedItems/${_id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
             }
-          });
+        });
     }
-
-
-
 
 
     return (
@@ -70,10 +69,13 @@ const MyItemCard = ({ card }) => {
                     </div>
 
                     <div className="flex gap-3 items-center grow">
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded flex items-center gap-1">
-                            <span>Update</span> <FiEdit></FiEdit>
+
+
+                        <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded ">
+                            <Link to={`/update/${card._id}`} className="flex items-center gap-1"><span>Update</span> <MdDeleteForever></MdDeleteForever></Link>
                         </button>
-                        <button onClick={()=> handleDelete(card._id)} className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded flex items-center gap-1">
+
+                        <button onClick={() => handleDelete(card._id)} className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded flex items-center gap-1">
                             <span>Delete</span> <MdDeleteForever></MdDeleteForever>
                         </button>
                     </div>

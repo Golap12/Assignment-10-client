@@ -12,58 +12,64 @@ import Contact from '../pages/contact/Contact';
 import AddCraftItem from './../pages/addCraftItem/AddCraftItem';
 import MyArtAndCraftList from './../pages/myArtAndCraftList/MyArtAndCraftList';
 import AllArtAndCrafts from './../pages/allArtAndCrafts/AllArtAndCrafts';
+import Update from './../components/update/Update';
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root></Root>,
-      errorElement: <Error></Error>,
-      children: [
-        {
-          path: "/",
-          element: <Home></Home>,
-          loader: () => fetch('http://localhost:5000/homeData')
-        },
-        {
-          path: "/details/:id",
-          element: <PrivetRoute><Details></Details></PrivetRoute>,
-        },
-        {
-          path: "/allCraft",
-          element: <AllArtAndCrafts></AllArtAndCrafts>,
-          loader: () => fetch('http://localhost:5000/addeditems')
-        },
-        {
-          path: "/addItem",
-          element: <PrivetRoute><AddCraftItem></AddCraftItem></PrivetRoute>,
-        },
-        {
-          path: "/myList",
-          element: <PrivetRoute><MyArtAndCraftList></MyArtAndCraftList></PrivetRoute>,
-        },
-        {
-          path: "/details",
-          element: <PrivetRoute><Details></Details></PrivetRoute>,
-        },
-        {
-          path: "/register",
-          element: <Register></Register>,
-        },
-        {
-          path: "/login",
-          element: <Login></Login>,
-        },
-        {
-          path: "/about",
-          element: <About></About>,
-        },
-        {
-          path: "/contact",
-          element: <Contact></Contact>,
-        },
-      ],
-    },
-  ]);
-  
-  export default router;
+  {
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/homeData')
+      },
+      {
+        path: "/details/:id",
+        element: <PrivetRoute><Details></Details></PrivetRoute>,
+      },
+      {
+        path: "/allCraft",
+        element: <AllArtAndCrafts></AllArtAndCrafts>,
+        loader: () => fetch('http://localhost:5000/addeditems')
+      },
+      {
+        path: "/addItem",
+        element: <PrivetRoute><AddCraftItem></AddCraftItem></PrivetRoute>,
+      },
+      {
+        path: "/myList",
+        element: <PrivetRoute><MyArtAndCraftList></MyArtAndCraftList></PrivetRoute>,
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update>,
+        loader: ({ params }) => fetch(`http://localhost:5000/addeditems/${params.id}`)
+      },
+      {
+        path: "/details",
+        element: <PrivetRoute><Details></Details></PrivetRoute>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+      },
+    ],
+  },
+]);
+
+export default router;
