@@ -54,11 +54,13 @@ const MyItemCard = ({ card }) => {
 
 
             <div className="p-4 flex flex-col">
+
                 <div className="flex justify-between items-center">
                     <h3 className="text-xl text-red-500 font-semibold mb-2">{card.item_name}</h3>
                     <span className="font-bold text-lg">Price: ${card.price}</span>
 
                 </div>
+
                 <div className="flex flex-col">
 
                     <p className="text-gray-600 mb-4"><span className="font-semibold">Description</span> :  {card.shortDescription}</p>
@@ -80,6 +82,7 @@ const MyItemCard = ({ card }) => {
                         </button>
                     </div>
                 </div>
+
             </div>
         </div>
     );

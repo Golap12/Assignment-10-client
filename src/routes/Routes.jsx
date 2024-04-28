@@ -13,6 +13,7 @@ import AddCraftItem from './../pages/addCraftItem/AddCraftItem';
 import MyArtAndCraftList from './../pages/myArtAndCraftList/MyArtAndCraftList';
 import AllArtAndCrafts from './../pages/allArtAndCrafts/AllArtAndCrafts';
 import Update from './../components/update/Update';
+import HomeDetails from '../components/homeDetails/HomeDetails';
 
 
 const router = createBrowserRouter([
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       {
         path: "/allCraft",
         element: <AllArtAndCrafts></AllArtAndCrafts>,
-        loader: () => fetch('http://localhost:5000/addeditems')
+        loader: () => fetch('http://localhost:5000/addedItems')
       },
       {
         path: "/addItem",
@@ -46,11 +47,17 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({ params }) => fetch(`http://localhost:5000/addeditems/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/addedItems/${params.id}`)
       },
       {
-        path: "/details",
+        path: "/details/:id",
         element: <PrivetRoute><Details></Details></PrivetRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/addedItems/${params.id}`)
+      },
+      {
+        path: "/homeDetails/:id",
+        element: <HomeDetails></HomeDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/homeData/${params.id}`)
       },
       {
         path: "/register",

@@ -6,7 +6,6 @@ import HomeCard from "./homeCard/HomeCard";
 const Home = () => {
 
     const data = useLoaderData();
-    console.log(data);
 
     return (
         <div className="mt-10">
