@@ -16,7 +16,7 @@ const AllItemCard = ({ item }) => {
                 </div>
             </div>
             <div className="p-4">
-                <h3 className="text-lg font-medium mb-2">{item.itemName}</h3>
+                <h3 className="text-lg font-medium mb-2">{item.item_name}</h3>
                 <p className="text-gray-600 text-sm mb-4">{item.shortDescription}</p>
                 <div className="flex items-center justify-between">
                     <span className="font-bold text-lg">${item.price}</span>
