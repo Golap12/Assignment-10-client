@@ -5,10 +5,9 @@ const HomeDetails = () => {
 
 
     const hData = useLoaderData();
-    console.log(hData);
 
     return (
-        <div className="font-[sans-serif] mt-10">
+        <div className=" mt-10">
             <h1 className="text-3xl font-bold text-center mb-3">Item information</h1>
             <div className="p-6 lg:max-w-7xl max-w-2xl max-lg:mx-auto">
 

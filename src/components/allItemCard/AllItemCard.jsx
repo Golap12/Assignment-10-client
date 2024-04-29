@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 const AllItemCard = ({ item }) => {
-
+console.log(item._id);
     return (
 
         <div className="overflow-x-auto bg-slate-200">

@@ -47,12 +47,12 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({ params }) => fetch(`http://localhost:5000/addedItems/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/addeditems/${params.id}`)
       },
       {
         path: "/details/:id",
         element: <PrivetRoute><Details></Details></PrivetRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/addedItems/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/addeditems/${params.id}`)
       },
       {
         path: "/homeDetails/:id",

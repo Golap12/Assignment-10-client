@@ -7,10 +7,10 @@ const HomeCard = ({item}) => {
 
     return (
 
-        <div className="bg-slate-100 rounded-lg overflow-hidden shadow-lg ">
+        <div id="card" className="bg-slate-100 rounded-lg overflow-hidden shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] ">
             <div className="relative">
                 <img className="w-full h-[200px]" src={item.imageURL} alt="Product Image" />
-                <div className="absolute top-0 right-0 backdrop-blur-sm bg-[#ffffff47] text-black px-2 py-1 m-2 rounded-md text-sm font-medium">{item.stockStatus}
+                <div className="absolute top-0 right-0 backdrop-blur-sm bg-[#ff818147] text-black px-2 py-1 m-2 rounded-md text-sm font-medium">{item.stockStatus}
                 </div>
             </div>
             <div className="p-4">
