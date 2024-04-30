@@ -6,10 +6,10 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
-import loginImg from "../../assets/images/171.png";
 import { Helmet } from "react-helmet-async";
 
-
+import Lottie from "lottie-react";
+import login from "../../../public/login.json"
 
 
 const Login = () => {
@@ -60,7 +60,7 @@ const Login = () => {
         <title>Website Name | Login</title>
       </Helmet>
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-center text-[#1f6b69]">Login Now!</h1>
+        <h1 className="text-3xl font-bold text-center text-[#c04141]">Login Now!</h1>
       </div>
       <hr className="w-1/4 mx-auto mt-5" />
 
@@ -140,7 +140,8 @@ const Login = () => {
         </div>
 
         <div className="flex-1 mt-5 ">
-          <img src={loginImg} alt="" />
+          {/* <img src={loginImg} alt="" /> */}
+          <Lottie animationData={login}></Lottie>
         </div>
       </div>
     </div>

@@ -7,11 +7,10 @@ import { IoEyeOffSharp } from "react-icons/io5";
 import { MdRemoveRedEye } from "react-icons/md";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
-import regImg from "../../assets/images/172.png";
 import { Helmet } from "react-helmet-async";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-// AOS.init();
+
+import Lottie from "lottie-react";
+import register from "../../../public/register.json"
 
 const Register = () => {
   const navigate = useNavigate();
@@ -78,7 +77,7 @@ const Register = () => {
       </Helmet>
 
       <div className="text-center lg:text-left">
-        <h1 className="text-3xl font-bold text-center text-[#1f6b69]">Create An Account!</h1>
+        <h1 className="text-3xl font-bold text-center text-[#c54646]">Create An Account!</h1>
       </div>
       <hr className="w-1/4 mx-auto mt-5" />
 
@@ -177,7 +176,8 @@ const Register = () => {
 
         <div className="flex-1">
           <div>
-            <img src={regImg} alt="" />
+            {/* <img src={regImg} alt="" /> */}
+            <Lottie animationData={register}></Lottie>
           </div>
         </div>
       </div>
