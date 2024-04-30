@@ -10,7 +10,7 @@ const MyArtAndCraftList = () => {
     const [sortOrder, setSortOrder] = useState("asc");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myItems/${user?.email}`)
+        fetch(`https://assignment-10-server-kappa-seven.vercel.app/myItems/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setItems(data);
@@ -51,8 +51,8 @@ const MyArtAndCraftList = () => {
                     </select>
                 </div>
             </div>
-            <h1 className="text-3xl font-extrabold text-center">My Item List</h1>
-            <hr className="w-1/4 mt-2 border-2 border-red-500 mx-auto" />
+            <h1 className="md:text-3xl text-2xl font-extrabold text-center">My Item List</h1>
+            <hr className="lg:w-1/4 w-2/4 mt-2 border-2 border-red-500 mx-auto" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-5 mt-10 max-w-6xl mx-auto">
                 {sortedItems.map((card) => (
                     <MyItemCard key={card._id} card={card} />

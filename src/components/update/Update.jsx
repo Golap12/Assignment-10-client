@@ -38,7 +38,7 @@ const Update = () => {
             subcategory_Name, item_name, shortDescription, price, rating, customization, processing_time, stockStatus, photoURL, user_Name, email
         }
         
-        fetch(`http://localhost:5000/allitems/${_id}`, {
+        fetch(`https://assignment-10-server-kappa-seven.vercel.app/allitems/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

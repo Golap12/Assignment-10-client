@@ -38,7 +38,7 @@ const AddCraftItem = () => {
 
         // send data to the server
 
-        fetch('http://localhost:5000/allitems', {
+        fetch('https://assignment-10-server-kappa-seven.vercel.app/allitems', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

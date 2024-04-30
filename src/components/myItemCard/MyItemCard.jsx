@@ -26,7 +26,7 @@ const MyItemCard = ({ card }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/allitems/${_id}`, {
+                fetch(`https://assignment-10-server-kappa-seven.vercel.app/allitems/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

@@ -6,12 +6,7 @@ import Footer from './../footer/Footer';
 
 const Root = () => {
     return (
-        <div 
-        // style={{
-        //     backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img1})`,
-        // }}
-        >
-
+        <div>
             <Nav></Nav>
             <div className=" min-h-screen max-w-screen-2xl mx-auto">
                 <Outlet></Outlet>

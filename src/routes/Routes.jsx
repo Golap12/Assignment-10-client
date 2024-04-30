@@ -25,14 +25,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/homeData')
+        loader: () => fetch('https://assignment-10-server-kappa-seven.vercel.app/homeData')
       },
 
 
       {
         path: "/allCraft",
         element: <AllArtAndCrafts></AllArtAndCrafts>,
-        loader: () => fetch('http://localhost:5000/allitems')
+        loader: () => fetch('https://assignment-10-server-kappa-seven.vercel.app/allitems')
       },
 
       {
@@ -48,22 +48,23 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({ params }) => fetch(`http://localhost:5000/allitems/${params.id}`)
-      },
-
-
-      {
-        path: "/matchCategory/:subcategory",
-        element: <MatchCategory></MatchCategory>,
-        loader:({params}) => fetch(`http://localhost:5000/allitems/${params.subcategory}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-kappa-seven.vercel.app/allitems/${params.id}`)
       },
 
 
       {
         path: "/details/:id",
         element: <Details></Details>,
-        loader: ({ params }) => fetch(`http://localhost:5000/allitems/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-kappa-seven.vercel.app/allitems/${params.id}`)
       },
+
+
+      {
+        path: "/matchCategory/:subcategory",
+        element: <MatchCategory></MatchCategory>,
+        loader:({params}) => fetch(`https://assignment-10-server-kappa-seven.vercel.app/allitems/subcategory/${params.subcategory}`)
+      },
+
 
       {
         path: "/register",

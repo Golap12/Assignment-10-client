@@ -7,7 +7,6 @@ const Details = () => {
 
 
     const data = useLoaderData();
-    console.log(data);
 
     const { subcategory_Name, item_name, shortDescription, price, rating, customization, processing_time, stockStatus, photoURL } = data
 
@@ -21,8 +20,8 @@ const Details = () => {
                 <title>Gravo | Details</title>
             </Helmet>
             <div className="flex flex-col items-center mt-10">
-                <p className="text-2xl md:text-4xl font-extrabold text-red-500 mb-2">Item Details</p>
-                <hr className="border w-2/4 md:w-1/4" />
+                <p className="text-2xl md:text-4xl font-extrabold  mb-2">Item Details</p>
+                <hr className="border w-2/4 md:w-1/4 border-red-500" />
             </div>
 
             <div className="flex flex-col md:flex-row gap-5 mt-10 bg-slate-200 px-2 py-5">

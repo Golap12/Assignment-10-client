@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 
+// import { useEffect, useState } from "react";
 import { Zoom } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
 
 const HomeCard = ({ item }) => {
+
 
     return (
 

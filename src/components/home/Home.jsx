@@ -2,16 +2,15 @@
 import { useLoaderData } from "react-router-dom";
 import Carousel from "../carousel/Carousel";
 import HomeCard from "./homeCard/HomeCard";
-import Newsletter from "../newsSection/Newsletter";
 import { Slide, Zoom } from "react-awesome-reveal";
 import { Typewriter } from 'react-simple-typewriter'
 import { Helmet } from "react-helmet-async";
+import Testimonial from './../testimonial/Testimonial';
 
 
 const Home = () => {
 
     const data = useLoaderData();
-    console.log(data);
 
 
 
@@ -62,7 +61,7 @@ const Home = () => {
 
 
                 <div className="mt-16 mb-10 text-center">
-                    <h1 className="text-3xl font-extrabold mb-2">All Categories</h1>
+                    <h1 className="text-3xl text-red-500 font-extrabold mb-2">All Categories</h1>
                     <p className="text-sm text-gray-500">Art, a potent expression in diverse forms, reflects culture, sparks change, and inspires creativity and personal growth.</p>
                 </div>
 
@@ -76,7 +75,7 @@ const Home = () => {
 
 
                 <div className="mt-10">
-                    <Newsletter></Newsletter>
+                    <Testimonial></Testimonial>
                 </div>
 
             </div>

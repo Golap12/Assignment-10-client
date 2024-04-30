@@ -23,10 +23,10 @@ const About = () => {
 
         <div className="flex-1 flex flex-col justify-center lg:p-8 md:p-5 p-2">
           <h1 className="text-xl lg:text-3xl md:text-2xl font-extrabold">
-            Welcome to Our Real Estate Agency
+            Welcome to Our Art Agency
           </h1>
           <p className="mt-5">
-            At our agency, we are dedicated to helping you find the perfect home or property. With years of experience in the real estate industry, our team of experts is committed to providing exceptional service and guiding you through every step of the process. Whether you are buying, selling, or investing, we are here to assist you in achieving your goals. Contact us today to learn more about how we can help you fulfill your real estate needs.
+            At our agency, we are dedicated to helping you find the perfect art or crafts. With years of experience in the art industry, our team of experts is committed to providing exceptional service and guiding you through every step of the process. Whether you are buying, selling, or investing, we are here to assist you in achieving your goals. Contact us today to learn more about how we can help you fulfill your art needs.
           </p>
           <button>
             <a href="/contact" className="bg-red-500 hover:bg-[#1d504f] text-white font-bold py-2 px-4 rounded inline-block mt-4 transition-colors duration-300 ease-in-out">
@@ -41,23 +41,23 @@ const About = () => {
       <div className="flex flex-col md:flex-row-reverse gap-5 md:gap-10 p-5 mt-10">
         <div className="flex-1">
           <p>
-            Welcome to <strong>PropertyPulse</strong>, where we believe in
+            Welcome to <strong>Gravo</strong>, where we believe in
             transforming your dreams into tangible realities. With a passion for
-            real estate and a commitment to exceptional service, we are
-            dedicated to guiding you through every step of your property
+            art and a commitment to exceptional service, we are
+            dedicated to guiding you through every step of your art
             journey.
           </p>
 
           <p>
-            At <strong>PropertyPulse</strong>, we understand that buying, selling, or
-            renting a property can be one of the most significant decisions in
+            At <strong>Gravo</strong>, we understand that buying, selling, or
+            renting a Art item can be one of the most significant decisions in
             your life. That is why we are here to provide you with the
             expertise, support, and personalized attention you deserve.
           </p>
 
           <p>
             Our team consists of seasoned professionals who bring a wealth of
-            experience and knowledge to the table. From skilled real estate
+            experience and knowledge to the table. From skilled Art
             agents to dedicated administrative staff, each member of our team is
             committed to exceeding your expectations and ensuring your
             satisfaction.
@@ -81,7 +81,7 @@ const About = () => {
               </div>
               <div className="flex flex-col justify-start m-2 lg:m-6">
                 <p className="text-4xl font-bold leading-none lg:text-6xl">3</p>
-                <p className="text-sm sm:text-base">Published books</p>
+                <p className="text-sm sm:text-base">Published art</p>
               </div>
               <div className="flex flex-col justify-start m-2 lg:m-6">
                 <p className="text-4xl font-bold leading-none lg:text-6xl">8</p>
