@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Tower } from "../../providers/AuthProvider";
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet-async";
 
 
 const AddCraftItem = () => {
@@ -37,7 +38,7 @@ const AddCraftItem = () => {
 
         // send data to the server
 
-        fetch('http://localhost:5000/addeditems', {
+        fetch('http://localhost:5000/allitems', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -60,6 +61,9 @@ const AddCraftItem = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Gravo | Add Art</title>
+            </Helmet>
             <div className="max-w-[1000px] md:w-3/4  mt-10 mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold mb-4 text-center">Add Art and Craft Item</h2>
                 <form onSubmit={handleAdd}>
@@ -68,13 +72,13 @@ const AddCraftItem = () => {
                         <label htmlFor="subcategory" className="block font-medium mb-1">Sub Category Name</label>
                         <select id="subcategory" name="subcategory_Name" className="p-2 w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                             {/* Options for subcategories */}
-                            <option value="Card Making">Card Making</option>
-                            <option value="Scrapbooking">Scrapbooking</option>
-                            <option value="Paper Quilling & origami"> Paper Quilling & origami
+                            <option value="Landscape Painting">Landscape Painting</option>
+                            <option value="Portrait Drawing">Portrait Drawing</option>
+                            <option value="Watercolour Painting"> Watercolour Painting
                             </option>
-                            <option value="Glass Painting">Glass Painting</option>
-                            <option value="Lampworking">Lampworking</option>
-                            <option value="Glass Dying & Staining">Glass Dying & Staining</option>
+                            <option value="Oil Painting">Oil Painting</option>
+                            <option value="Charcoal Sketching">Charcoal Sketching</option>
+                            <option value="Cartoon Drawing">Cartoon Drawing</option>
                         </select>
                     </div>
 

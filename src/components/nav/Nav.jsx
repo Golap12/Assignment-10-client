@@ -40,7 +40,7 @@ const Nav = () => {
                     }
                     to="/allCraft"
                 >
-                    All Art & craft
+                    All Art
                 </NavLink>
             </li>
 
@@ -53,7 +53,7 @@ const Nav = () => {
                     }
                     to="/addItem"
                 >
-                    Add Craft Item
+                    Add Art
                 </NavLink>
             </li>
 
@@ -66,7 +66,7 @@ const Nav = () => {
                     }
                     to="/myList"
                 >
-                    My Craft List
+                    My Art
                 </NavLink>
             </li>
 
@@ -99,7 +99,7 @@ const Nav = () => {
     );
 
     return (
-        <div className=" flex items-center p-3 md:p-5 sticky top-0  z-10 shadow-lg bg-slate-100">
+        <div className=" flex items-center p-3 md:p-5 sticky top-0  z-10 backdrop-blur-md shadow-lg">
             <div className="navbar-start items-center lg:justify-start justify-between flex w-full md:w-[50%]">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className=" lg:hidden">
@@ -120,7 +120,7 @@ const Nav = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="md:backdrop-blur-md backdrop-blur-md bg-[#ffffff47] border dropdown-content md:mt-7 mt-3 p-1 space-y-2 w-screen md:w-[99vw] ml-[-15px] gap-2 nav"
+                        className="md:backdrop-blur-md backdrop-blur-xl bg-[#ebebebd1] dropdown-content md:mt-7 mt-5 p-1 px-2 space-y-2 w-screen md:w-[99vw] ml-[-15px] gap-2 nav font-bold md:ml-[-20px]"
                     >
                         {links}
                     </ul>

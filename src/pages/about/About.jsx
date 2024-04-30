@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import about from "../../assets/images/about.jpg";
 
 // import { Helmet } from "react-helmet";
@@ -6,10 +7,10 @@ import about from "../../assets/images/about.jpg";
 const About = () => {
   return (
     <div className=" p-5 mt-5">
-      {/* <Helmet>
-        <title>PropertyPulse | About</title>
-      </Helmet> */}
-      <h1 className="text-2xl md:text-4xl font-bold text-center text-[#1f6b69]">About Us</h1>
+      <Helmet>
+        <title>Gravo | About</title>
+      </Helmet>
+      <h1 className="text-2xl md:text-4xl font-bold text-center text-red-500">About Us</h1>
       <div className="border w-1/4 mx-auto mt-3"></div>
 
 
@@ -28,7 +29,7 @@ const About = () => {
             At our agency, we are dedicated to helping you find the perfect home or property. With years of experience in the real estate industry, our team of experts is committed to providing exceptional service and guiding you through every step of the process. Whether you are buying, selling, or investing, we are here to assist you in achieving your goals. Contact us today to learn more about how we can help you fulfill your real estate needs.
           </p>
           <button>
-            <a href="/contact" className="bg-[#2a8e8a] hover:bg-[#1d504f] text-white font-bold py-2 px-4 rounded inline-block mt-4 transition-colors duration-300 ease-in-out">
+            <a href="/contact" className="bg-red-500 hover:bg-[#1d504f] text-white font-bold py-2 px-4 rounded inline-block mt-4 transition-colors duration-300 ease-in-out">
               Contact Us
             </a>
           </button>

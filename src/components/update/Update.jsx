@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Tower } from "../../providers/AuthProvider";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 // import { FiEdit } from "react-icons/fi";
 
 const Update = () => {
@@ -37,7 +38,7 @@ const Update = () => {
             subcategory_Name, item_name, shortDescription, price, rating, customization, processing_time, stockStatus, photoURL, user_Name, email
         }
         
-        fetch(`http://localhost:5000/addeditems/${_id}`, {
+        fetch(`http://localhost:5000/allitems/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -61,6 +62,9 @@ const Update = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Gravo | Update Art</title>
+            </Helmet>
             <div className="max-w-[1000px] md:w-3/4  mt-10 mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold mb-4 text-center">Update Art and Craft Item</h2>
                 <form onSubmit={handleUpdate}>

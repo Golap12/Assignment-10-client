@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa";
 import { CiEdit } from "react-icons/ci";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { Zoom } from "react-awesome-reveal";
 
 
 
@@ -25,7 +26,7 @@ const MyItemCard = ({ card }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/addedItems/${_id}`, {
+                fetch(`http://localhost:5000/allitems/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -45,10 +46,11 @@ const MyItemCard = ({ card }) => {
 
 
     return (
-        <div className="rounded-lg overflow-hidden shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-1">
+        <Zoom>
+            <div className="rounded-lg overflow-hidden shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-1">
             <div className="relative">
                 <img className="w-full h-[200px]" src={card.photoURL} alt="Product Image" />
-                <div className="absolute top-0 right-0 backdrop-blur-sm bg-[#ffffff47] text-black px-2 py-1 m-2 rounded-md text-sm font-medium">{card.stockStatus}
+                <div className="absolute top-0 right-0 backdrop-blur-sm text-black px-2 py-1 m-2 rounded-md text-sm font-medium">{card.stockStatus}
                 </div>
             </div>
 
@@ -85,6 +87,7 @@ const MyItemCard = ({ card }) => {
 
             </div>
         </div>
+        </Zoom>
     );
 };
 

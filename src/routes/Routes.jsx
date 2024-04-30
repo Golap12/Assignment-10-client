@@ -13,7 +13,7 @@ import AddCraftItem from './../pages/addCraftItem/AddCraftItem';
 import MyArtAndCraftList from './../pages/myArtAndCraftList/MyArtAndCraftList';
 import AllArtAndCrafts from './../pages/allArtAndCrafts/AllArtAndCrafts';
 import Update from './../components/update/Update';
-import HomeDetails from '../components/homeDetails/HomeDetails';
+import MatchCategory from '../components/matchCategory/MatchCategory';
 
 
 const router = createBrowserRouter([
@@ -27,38 +27,44 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () => fetch('http://localhost:5000/homeData')
       },
-      {
-        path: "/details/:id",
-        element: <PrivetRoute><Details></Details></PrivetRoute>,
-      },
+
+
       {
         path: "/allCraft",
         element: <AllArtAndCrafts></AllArtAndCrafts>,
-        loader: () => fetch('http://localhost:5000/addedItems')
+        loader: () => fetch('http://localhost:5000/allitems')
       },
+
       {
         path: "/addItem",
         element: <PrivetRoute><AddCraftItem></AddCraftItem></PrivetRoute>,
       },
+
       {
         path: "/myList",
         element: <PrivetRoute><MyArtAndCraftList></MyArtAndCraftList></PrivetRoute>,
       },
+
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({ params }) => fetch(`http://localhost:5000/addeditems/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/allitems/${params.id}`)
       },
+
+
+      {
+        path: "/matchCategory/:subcategory",
+        element: <MatchCategory></MatchCategory>,
+        loader:({params}) => fetch(`http://localhost:5000/allitems/${params.subcategory}`)
+      },
+
+
       {
         path: "/details/:id",
-        element: <PrivetRoute><Details></Details></PrivetRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/addeditems/${params.id}`)
+        element: <Details></Details>,
+        loader: ({ params }) => fetch(`http://localhost:5000/allitems/${params.id}`)
       },
-      {
-        path: "/homeDetails/:id",
-        element: <HomeDetails></HomeDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/homeData/${params.id}`)
-      },
+
       {
         path: "/register",
         element: <Register></Register>,

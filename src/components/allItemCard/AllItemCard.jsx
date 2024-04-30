@@ -1,20 +1,24 @@
 /* eslint-disable react/prop-types */
 
+import { Zoom } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
 // import { Link } from "react-router-dom";
 
 
 const AllItemCard = ({ item }) => {
-console.log(item._id);
+    // console.log(item);
+
+
     return (
 
-        <div className="overflow-x-auto bg-slate-200">
+        <Zoom>
+            <div className="overflow-x-auto bg-slate-200">
             <table className="table ">
 
                 <thead>
                     <tr className="text-lg font-bold text-black *:border *:border-white">
-                        <th className="hidden lg:block">Name</th>
+                        <th className="">Name</th>
                         <th>Available Stock</th>
                         <th>Price</th>
                         <th>Action</th>
@@ -23,7 +27,7 @@ console.log(item._id);
 
                 <tbody>
                     <tr>
-                        <td className="hidden lg:block">
+                        <td className="">
                             <div className="flex items-center gap-3">
                                 <div className="avatar">
                                     <div className=" w-40 h-20 ">
@@ -48,6 +52,7 @@ console.log(item._id);
 
             </table>
         </div>
+        </Zoom>
 
     );
 };

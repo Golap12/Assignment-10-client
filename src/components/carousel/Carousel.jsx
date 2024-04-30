@@ -10,6 +10,7 @@ import img2 from "../../assets/images/2.jpg";
 import img3 from "../../assets/images/3.jpg";
 import img4 from "../../assets/images/4.jpg";
 import img5 from "../../assets/images/5.jpg";
+import img6 from "../../assets/images/6.jpg";
 
 
 const Carousel = () => {
@@ -36,12 +37,12 @@ const Carousel = () => {
                 }}
                 modules={[Autoplay, Pagination, EffectCreative]}
                 loop={true}
-                className="mySwiper  w-[98%] h-[500px] rounded-lg"
+                className="mySwiper  w-[100%] h-[590px]"
             >
                 <SwiperSlide className="">
                     <div className=""
                         style={{
-                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img1})`,
+                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(${img1})`,
                             backgroundPosition: "center",
                             backgroundSize: "cover",
                             display: "flex",
@@ -58,7 +59,7 @@ const Carousel = () => {
                 <SwiperSlide className="">
                     <div className=""
                         style={{
-                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img2})`,
+                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(${img2})`,
                             backgroundPosition: "center",
                             backgroundSize: "cover",
                             display: "flex",
@@ -75,7 +76,7 @@ const Carousel = () => {
                 <SwiperSlide className="">
                     <div className=""
                         style={{
-                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img3})`,
+                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(${img3})`,
                             backgroundPosition: "center",
                             backgroundSize: "cover",
                             display: "flex",
@@ -92,7 +93,7 @@ const Carousel = () => {
                 <SwiperSlide className="">
                     <div className=""
                         style={{
-                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img4})`,
+                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(${img4})`,
                             backgroundPosition: "center",
                             backgroundSize: "cover",
                             display: "flex",
@@ -109,7 +110,23 @@ const Carousel = () => {
                 <SwiperSlide className="">
                     <div className=""
                         style={{
-                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img5})`,
+                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(${img5})`,
+                            backgroundPosition: "center",
+                            backgroundSize: "cover",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            width: "100%",
+                            height: "100%",
+                            color: "WHITE",
+                            fontSize: "5rem",
+                        }}>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="">
+                    <div className=""
+                        style={{
+                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(${img6})`,
                             backgroundPosition: "center",
                             backgroundSize: "cover",
                             display: "flex",

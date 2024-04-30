@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Tower } from "../../providers/AuthProvider";
 import MyItemCard from "../../components/myItemCard/MyItemCard";
+import { Helmet } from "react-helmet-async";
 
 const MyArtAndCraftList = () => {
     const { user } = useContext(Tower);
@@ -16,13 +17,13 @@ const MyArtAndCraftList = () => {
             });
     }, [user]);
 
-   
+
     const handleSortChange = (e) => {
         setSortBy(e.target.value);
         setSortOrder(sortOrder === "asc" ? "desc" : "asc");
     };
 
-   
+
     const sortedItems = items.slice().sort((a, b) => {
         if (sortBy === "price") {
             return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
@@ -34,6 +35,9 @@ const MyArtAndCraftList = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Gravo | My List</title>
+            </Helmet>
             <div className="flex flex-col gap-5 relative mt-5">
                 <div className="flex gap-2 items-center text-center absolute right-5 top-16 md:right-6 xl:right-20">
                     <p className="font-bold">Sort By :</p>

@@ -7,7 +7,7 @@ const Error = () => {
 	return (
 		<section className="flex items-center h-full p-16 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
 			<Helmet>
-				<title>PropertyPulse | Error Page</title>
+				<title>Gravo | Error Page</title>
 			</Helmet>
 			<div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
 				<div className="max-w-md text-center">

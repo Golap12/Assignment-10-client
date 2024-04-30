@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Helmet } from "react-helmet-async";
 import contact from "../../assets/images/contact.svg";
 
 // import { Helmet } from "react-helmet";
@@ -8,16 +9,16 @@ import contact from "../../assets/images/contact.svg";
 const Contact = () => {
   return (
     <div className="mt-10">
-      {/* <Helmet>
-        <title>PropertyPulse | Contact</title>
-      </Helmet> */}
-      <h1 className="text-2xl md:text-4xl font-bold text-center text-[#1f6b69]">Contact Us</h1>
+      <Helmet>
+        <title>Gravo | Contact</title>
+      </Helmet>
+      <h1 className="text-2xl md:text-4xl font-bold text-center text-red-500">Contact Us</h1>
       <div className="border w-1/4 mx-auto mt-3"></div>
 
       <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
         <div className="flex flex-col justify-between">
           <div className="space-y-2">
-            <h2 className="text-4xl font-bold leading-tight lg:text-5xl text-[#1f6b69]">
+            <h2 className="text-4xl font-bold leading-tight lg:text-5xl text-[#c03c3c]">
               Let's talk!
             </h2>
           </div>
@@ -58,7 +59,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full p-2 text-sm font-bold tracking-wide uppercase rounded text-white bg-[#1f6b69] transition-all duration-300 ease-in-out transform hover:scale-105"
+            className="w-full p-2 text-sm font-bold tracking-wide uppercase rounded text-white bg-[#c53333] transition-all duration-300 ease-in-out transform hover:scale-105"
           >
             Send Message
           </button>
