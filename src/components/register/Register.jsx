@@ -70,7 +70,7 @@ const Register = () => {
 
   return (
     <div
-      className="mt-10 p-5"
+      className="pt-10 p-5"
     >
       <Helmet>
         <title>PropertyPulse | Register</title>
@@ -81,8 +81,8 @@ const Register = () => {
       </div>
       <hr className="w-1/4 mx-auto mt-5" />
 
-      <div className=" flex flex-col md:flex-row-reverse mt-5 md:p-9 p-4 gap-5 space-y-5 border rounded-lg bg-[#2eaeaa1d]">
-        <div className="flex-1 border-2 rounded-lg bg-slate-100 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+      <div className=" flex flex-col md:flex-row-reverse mt-5 md:p-9 p-4 gap-5 space-y-5 border rounded-lg">
+        <div className="flex-1 border-2 rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
           <h1 className="text-center text-xl md:text-3xl font-bold mt-10">
             Provide Your Information
           </h1>
@@ -100,7 +100,7 @@ const Register = () => {
                 type="text"
                 name="name"
                 placeholder="Name"
-                className="input input-bordered "
+                className="input border-white bg-inherit text-white"
                 required
               />
             </div>
@@ -113,7 +113,7 @@ const Register = () => {
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="input input-bordered"
+                className="input border-white bg-inherit text-white"
                 required
               />
             </div>
@@ -126,7 +126,7 @@ const Register = () => {
                 type="text"
                 name="photoUrl"
                 placeholder="Photo Url"
-                className="input input-bordered"
+                className="input border-white bg-inherit text-white"
               />
             </div>
 
@@ -138,7 +138,7 @@ const Register = () => {
                 type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="Password"
-                className="input input-bordered"
+                className="input border-white bg-inherit text-white"
                 required
               />
 
@@ -168,7 +168,7 @@ const Register = () => {
 
           <p className="label-text-alt text-center mb-4 ">
             Already have an account? Please{" "}
-            <span className="link font-bold text-blue-500">
+            <span className="link font-bold text-slate-200">
               <Link to="/login">Login</Link>
             </span>
           </p>
@@ -176,7 +176,6 @@ const Register = () => {
 
         <div className="flex-1">
           <div>
-            {/* <img src={regImg} alt="" /> */}
             <Lottie animationData={register}></Lottie>
           </div>
         </div>

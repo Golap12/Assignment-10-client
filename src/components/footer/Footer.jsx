@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <footer className="mt-10 divide-y bg-red-100">
+        <footer className="mt-10 divide-y backdrop-blur-lg border">
             <div className=" container px-4 flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-1/3">
                     <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
@@ -19,7 +19,7 @@ const Footer = () => {
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
                     <div className="space-y-3">
                         <h3 className="tracking-wide uppercase text-xl font-bold text-red-500">Product</h3>
-                        <ul className="space-y-1">
+                        <ul className="space-y-1 text-white">
                             <li>
                                 <a rel="noopener noreferrer" href="#">Features</a>
                             </li>
@@ -36,7 +36,7 @@ const Footer = () => {
                     </div>
                     <div className="space-y-3">
                         <h3 className="tracking-wide uppercase  text-xl font-bold text-red-500">Company</h3>
-                        <ul className="space-y-1">
+                        <ul className="space-y-1 text-white">
                             <li>
                                 <a rel="noopener noreferrer" href="#">Privacy</a>
                             </li>
@@ -47,7 +47,7 @@ const Footer = () => {
                     </div>
                     <div className="space-y-3">
                         <h3 className="uppercase  text-xl font-bold text-red-500">Developers</h3>
-                        <ul className="space-y-1">
+                        <ul className="space-y-1  text-white">
                             <li>
                                 <a rel="noopener noreferrer" href="#">Public API</a>
                             </li>
@@ -81,7 +81,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="py-5 text-sm text-center bg-red-500 text-white">© 1968 Company Co. All rights reserved.</div>
+            <div className="py-5 text-sm text-center bg-[#c2414194] text-white">© 1968 Company Co. All rights reserved.</div>
         </footer>
     );
 };

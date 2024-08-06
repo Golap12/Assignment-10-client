@@ -61,15 +61,15 @@ const Update = () => {
 
 
     return (
-        <div>
+        <div className="pt-10 backdrop-blur-xl">
             <Helmet>
                 <title>Gravo | Update Art</title>
             </Helmet>
-            <div className="max-w-[1000px] md:w-3/4  mt-10 mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
+            <div className="max-w-[1000px] md:w-3/4  mx-auto p-6 rounded-lg shadow-2xl border border-white">
                 <h2 className="text-2xl font-bold mb-4 text-center">Update Art and Craft Item</h2>
                 <form onSubmit={handleUpdate}>
                     {/* Sub Category */}
-                    <div className="mb-4">
+                    <div className="mb-4 ">
                         <label htmlFor="subcategory" className="block font-medium mb-1">Sub Category Name</label>
                         <select defaultValue={subcategory_Name} id="subcategory" name="subcategory_Name" className="p-2 w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                             {/* Options for subcategories */}

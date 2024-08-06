@@ -60,17 +60,17 @@ const AddCraftItem = () => {
 
 
     return (
-        <div>
+        <div className="pt-5">
             <Helmet>
                 <title>Gravo | Add Art</title>
             </Helmet>
-            <div className="max-w-[1000px] md:w-3/4  mt-10 mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
+            <div className="max-w-[1000px] md:w-3/4  pt-10 mx-auto p-6 backdrop-blur-lg rounded-lg shadow-2xl border">
                 <h2 className="text-2xl font-bold mb-4 text-center">Add Art and Craft Item</h2>
                 <form onSubmit={handleAdd}>
                     {/* Sub Category */}
                     <div className="mb-4">
                         <label htmlFor="subcategory" className="block font-medium mb-1">Sub Category Name</label>
-                        <select id="subcategory" name="subcategory_Name" className="p-2 w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        <select id="subcategory" name="subcategory_Name" className="p-2 w-full border-gray-300  shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                             {/* Options for subcategories */}
                             <option value="Landscape Painting">Landscape Painting</option>
                             <option value="Portrait Drawing">Portrait Drawing</option>
@@ -85,30 +85,30 @@ const AddCraftItem = () => {
                     {/* Item Name */}
                     <div className="mb-4">
                         <label htmlFor="itemName" className="block font-medium mb-1">Item Name</label>
-                        <input type="text" id="itemName" name="item_name" className="w-full p-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
+                        <input type="text" id="itemName" name="item_name" className="w-full p-2 border-gray-300  shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
                     </div>
 
                     {/* Short Description */}
                     <div className="mb-4">
                         <label htmlFor="shortDescription" className="block font-medium mb-1">Short Description</label>
-                        <textarea id="shortDescription" name="shortDescription" rows="3" className="w-full p-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
+                        <textarea id="shortDescription" name="shortDescription" rows="3" className="w-full p-2 border-gray-300  shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
                     </div>
 
                     {/* Photo URL */}
                     <div className="mb-4">
                         <label htmlFor="photoUrl" className="block font-medium mb-1">Photo URL</label>
-                        <input type="text" id="photoUrl" name="photoUrl" className="w-full p-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
+                        <input type="text" id="photoUrl" name="photoUrl" className="w-full p-2 border-gray-300  shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
                     </div>
 
                     {/* Price and Rating */}
                     <div className="flex mb-4 gap-5 justify-between">
                         <div className="w-full">
                             <label htmlFor="price" className="block font-medium mb-1">Price</label>
-                            <input type="number" id="price" name="price" className="w-full p-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
+                            <input type="number" id="price" name="price" className="w-full p-2 border-gray-300  shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
                         </div>
                         <div className="w-full">
                             <label htmlFor="rating" className="block font-medium mb-1">Rating</label>
-                            <input type="number" id="rating" name="rating" min="0" max="5" step="0.1" className="w-full p-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
+                            <input type="number" id="rating" name="rating" min="0" max="5" step="0.1" className="w-full p-2 border-gray-300  shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
                         </div>
                     </div>
 
@@ -130,7 +130,7 @@ const AddCraftItem = () => {
 
                         <div className=" w-full">
                             <label htmlFor="processingTime" className="block font-medium mb-1">Processing Time</label>
-                            <input type="text" id="processingTime" name="processing_time" className="w-full p-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
+                            <input type="text" id="processingTime" name="processing_time" className="w-full p-2 border-gray-300  shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
                         </div>
                     </div>
 
@@ -138,7 +138,7 @@ const AddCraftItem = () => {
                     {/* Stock Status */}
                     <div className="mb-4">
                         <label htmlFor="stockStatus" className="block font-medium mb-1">Stock Status</label>
-                        <input type="text" id="stockStatus" name="stockStatus" className="w-full p-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
+                        <input type="text" id="stockStatus" name="stockStatus" className="w-full p-2 border-gray-300  shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
                     </div>
 
                     {/* User Name and Email */}
@@ -146,7 +146,7 @@ const AddCraftItem = () => {
                         <div className="w-full">
                             <label htmlFor="userName" className="block font-medium mb-1">User Name</label>
                             <input value={name}
-                                onChange={(e) => setName(e.target.value)} type="text" id="userName" name="userName" className="w-full p-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+                                onChange={(e) => setName(e.target.value)} type="text" id="userName" name="userName" className="w-full p-2 border-gray-300  shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
                         </div>
                         <div className="w-full">
                             <label htmlFor="email" className="block font-medium mb-1">Email</label>
@@ -156,12 +156,12 @@ const AddCraftItem = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 placeholder={user?.email || "Enter Your Email"}
-                                className="w-full p-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
+                                className="w-full p-2 border-gray-300  shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
                         </div>
                     </div>
 
                     {/* Submit button */}
-                    <button type="submit" className="w-full bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">ADD</button>
+                    <button type="submit" className="w-full bg-red-500 text-white py-2 px-4  hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">ADD</button>
                 </form>
             </div>
         </div>

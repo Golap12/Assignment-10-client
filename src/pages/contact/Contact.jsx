@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Helmet } from "react-helmet-async";
-import contact from "../../assets/images/contact.svg";
 
-// import { Helmet } from "react-helmet";
+import Lottie from "lottie-react";
+import contact from "../../../public/contact.json"
 
 
 
 const Contact = () => {
   return (
-    <div className="mt-10">
+    <div className="pt-10">
       <Helmet>
         <title>Gravo | Contact</title>
       </Helmet>
@@ -22,10 +22,10 @@ const Contact = () => {
               Let's talk!
             </h2>
           </div>
-          <img src={contact} alt="" className="p-6 h-52 md:h-64" />
+          <Lottie animationData={contact}></Lottie>
         </div>
 
-        <form noValidate="" className="space-y-6 bg-[#148b8724] p-10 rounded-lg animate-fade-in">
+        <form noValidate="" className="space-y-6 p-10 rounded-lg animate-fade-in">
           <div>
             <label htmlFor="name" className="text-sm">
               Full name
@@ -34,7 +34,7 @@ const Contact = () => {
               id="name"
               type="text"
               placeholder=""
-              className="w-full p-2 rounded border"
+              className="w-full p-2 rounded border bg-inherit text-white"
             />
           </div>
           <div>
@@ -44,7 +44,7 @@ const Contact = () => {
             <input
               id="email"
               type="email"
-              className="w-full p-2 rounded border"
+              className="w-full p-2 rounded border bg-inherit text-white"
             />
           </div>
           <div>
@@ -54,7 +54,7 @@ const Contact = () => {
             <textarea
               id="message"
               rows="3"
-              className="w-full p-2 rounded border"
+              className="w-full p-2 rounded border bg-inherit text-white"
             ></textarea>
           </div>
           <button

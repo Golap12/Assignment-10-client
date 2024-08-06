@@ -13,7 +13,7 @@ const Testimonial = () => {
                             Our happy clients say about us
                         </h2>
                         <p 
-                                 className=" font-medium text-[#0000006f]">
+                                 className=" font-medium  text-white">
                             2,157 people have said how good Rareblocks
                         </p>
                     </div>
@@ -22,7 +22,7 @@ const Testimonial = () => {
                         <a
                             href="#"
                             title=""
-                            className="pb-2 text-base font-bold leading-7 transition-all duration-200 border-b-2  hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"
+                            className="pb-2 text-base font-bold leading-7 transition-all duration-200 border-b-2  hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-black"
                         >
                             {" "}
                             Check all 2,157 reviews{" "}
@@ -40,8 +40,8 @@ const Testimonial = () => {
                         </div>
 
                         <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
-                            <div className="flex flex-col overflow-hidden shadow-xl">
-                                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+                            <div className="flex flex-col overflow-hidden shadow-2xl">
+                                <div className="flex flex-col justify-between flex-1 p-6 lg:py-8 lg:px-7">
                                     <div className="flex-1">
                                         <div className="flex items-center">
                                             <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -72,22 +72,22 @@ const Testimonial = () => {
                                         </div>
 
                                         <blockquote className="flex-1 mt-8">
-                                            <p className="text-lg leading-relaxed text-gray-900 font-pj">“You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change.”</p>
+                                            <p className="text-lg leading-relaxed text-gray-100 font-pj">“You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change.”</p>
                                         </blockquote>
                                     </div>
 
                                     <div className="flex items-center mt-8">
                                         <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png" alt="" />
                                         <div className="ml-4">
-                                            <p className="text-base font-bold text-gray-900 font-pj">Leslie Alexander</p>
-                                            <p className="mt-0.5 text-sm font-pj text-gray-600">Freelance React Developer</p>
+                                            <p className="text-base font-bold text-gray-100 font-pj">Leslie Alexander</p>
+                                            <p className="mt-0.5 text-sm font-pj text-black">Freelance React Developer</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="flex flex-col overflow-hidden shadow-xl">
-                                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+                            <div className="flex flex-col overflow-hidden shadow-2xl">
+                                <div className="flex flex-col justify-between flex-1 p-6 lg:py-8 lg:px-7">
                                     <div className="flex-1">
                                         <div className="flex items-center">
                                             <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -118,22 +118,22 @@ const Testimonial = () => {
                                         </div>
 
                                         <blockquote className="flex-1 mt-8">
-                                            <p className="text-lg leading-relaxed text-gray-900 font-pj">“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users.”</p>
+                                            <p className="text-lg leading-relaxed text-gray-100 font-pj">“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users.”</p>
                                         </blockquote>
                                     </div>
 
                                     <div className="flex items-center mt-8">
                                         <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png" alt="" />
                                         <div className="ml-4">
-                                            <p className="text-base font-bold text-gray-900 font-pj">Jacob Jones</p>
-                                            <p className="mt-0.5 text-sm font-pj text-gray-600">Digital Marketer</p>
+                                            <p className="text-base font-bold text-gray-100 font-pj">Jacob Jones</p>
+                                            <p className="mt-0.5 text-sm font-pj text-black">Digital Marketer</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="flex flex-col overflow-hidden shadow-xl">
-                                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+                            <div className="flex flex-col overflow-hidden shadow-2xl">
+                                <div className="flex flex-col justify-between flex-1 p-6 lg:py-8 lg:px-7">
                                     <div className="flex-1">
                                         <div className="flex items-center">
                                             <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -164,15 +164,15 @@ const Testimonial = () => {
                                         </div>
 
                                         <blockquote className="flex-1 mt-8">
-                                            <p className="text-lg leading-relaxed text-gray-900 font-pj">“I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.”</p>
+                                            <p className="text-lg leading-relaxed text-gray-100 font-pj">“I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.”</p>
                                         </blockquote>
                                     </div>
 
                                     <div className="flex items-center mt-8">
                                         <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png" alt="" />
                                         <div className="ml-4">
-                                            <p className="text-base font-bold text-gray-900 font-pj">Jenny Wilson</p>
-                                            <p className="mt-0.5 text-sm font-pj text-gray-600">Graphic Designer</p>
+                                            <p className="text-base font-bold text-gray-100 font-pj">Jenny Wilson</p>
+                                            <p className="mt-0.5 text-sm font-pj text-black">Graphic Designer</p>
                                         </div>
                                     </div>
                                 </div>

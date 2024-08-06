@@ -16,7 +16,7 @@ const Home = () => {
 
 
     return (
-        <div className="">
+        <div className=" text-white">
 
             <Helmet>
                 <title>Gravo | Home Page</title>
@@ -60,9 +60,9 @@ const Home = () => {
 
 
 
-                <div className="mt-16 mb-10 text-center">
-                    <h1 className="text-3xl text-red-500 font-extrabold mb-2">All Categories</h1>
-                    <p className="text-sm text-gray-500">Art, a potent expression in diverse forms, reflects culture, sparks change, and inspires creativity and personal growth.</p>
+                <div className="mt-16 mb-10 text-center  text-white">
+                    <h1 className="text-3xl  text-red-500 font-extrabold mb-2">All Categories</h1>
+                    <p className="text-sm ">Art, a potent expression in diverse forms, reflects culture, sparks change, and inspires creativity and personal growth.</p>
                 </div>
 
 

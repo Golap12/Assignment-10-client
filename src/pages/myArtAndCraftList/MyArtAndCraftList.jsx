@@ -38,9 +38,11 @@ const MyArtAndCraftList = () => {
             <Helmet>
                 <title>Gravo | My List</title>
             </Helmet>
-            <div className="flex flex-col gap-5 relative mt-5">
-                <div className="flex gap-2 items-center text-center absolute right-5 top-16 md:right-6 xl:right-20">
+            <div className="flex flex-col gap-5 relative pt-5">
+                <div className="flex gap-2 items-center text-center absolute right-[30%] top-20 md:right-6 xl:right-20">
                     <p className="font-bold">Sort By :</p>
+
+
                     <select
                         className="w-[100px] border-2 rounded-sm px-2 border-red-500"
                         value={sortBy}
@@ -49,6 +51,8 @@ const MyArtAndCraftList = () => {
                         <option value="price">Price</option>
                         <option value="rating">Rating</option>
                     </select>
+
+                    
                 </div>
             </div>
             <h1 className="md:text-3xl text-2xl font-extrabold text-center">My Item List</h1>

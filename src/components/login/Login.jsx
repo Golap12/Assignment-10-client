@@ -55,7 +55,7 @@ const Login = () => {
   };
 
   return (
-    <div className="mt-10 p-5">
+    <div className="pt-10 p-5">
       <Helmet>
         <title>Website Name | Login</title>
       </Helmet>
@@ -64,9 +64,9 @@ const Login = () => {
       </div>
       <hr className="w-1/4 mx-auto mt-5" />
 
-      <div className="flex md:flex-row-reverse flex-col sm:flex-col p-9 mt-5 rounded-lg gap-5 bg-[#2eaeaa1d]">
+      <div className="flex md:flex-row-reverse flex-col sm:flex-col p-9 mt-5 rounded-lg gap-5">
         <div className=" flex-1">
-          <div className=" border-2 mt-5 pb-5 rounded-lg bg-slate-100 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+          <div className=" border-2 mt-5 pb-5 rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
             <form
               onSubmit={handleLogin}
               className="card-body "
@@ -79,7 +79,7 @@ const Login = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="input input-bordered  "
+                  className="input border-white bg-inherit text-white"
                   required
                 />
               </div>
@@ -91,7 +91,7 @@ const Login = () => {
                   type="password"
                   name="password"
                   placeholder="Password"
-                  className="input input-bordered  "
+                  className="input border-white bg-inherit text-white"
                   required
                 />
                 <label className="label">
@@ -108,7 +108,7 @@ const Login = () => {
             </form>
             <p className="label-text-alt text-center ">
               Don't have an account? Please{" "}
-              <span className="link font-bold text-blue-500">
+              <span className="link font-bold text-white">
                 <Link to="/register">Register</Link>
               </span>
             </p>
@@ -116,7 +116,7 @@ const Login = () => {
 
           <div className=" flex flex-col justify-center items-center gap-2 mt-5 ">
             <div className="flex flex-col w-2/4 border-opacity-50">
-              <div className="divider ">OR</div>
+              <div className="divider text-slate-100">OR</div>
             </div>
 
             <p className="w-full" onClick={continueWithGoogle}>

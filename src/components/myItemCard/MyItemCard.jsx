@@ -57,15 +57,15 @@ const MyItemCard = ({ card }) => {
 
             <div className="p-4 flex flex-col">
 
-                <div className="flex justify-between items-center">
-                    <h3 className="text-lg text-red-500 font-semibold mb-2">{card.item_name}</h3>
-                    <span className="font-bold text-sm">Price: ${card.price}</span>
+                <div className="flex flex-col mb-2">
+                    <h3 className="text-2xl text-slate-100 font-semibold mb-2">{card.item_name}</h3>
+                    <p className="font-bold text-sm">Price : ${card.price}</p>
 
                 </div>
 
                 <div className="flex flex-col">
 
-                    <p className="text-gray-600 mb-4 text-sm"><span className="font-semibold">Description</span> :  {card.shortDescription}</p>
+                    <p className="text-gray-300 mb-4 text-sm"><span className="font-semibold">Description</span> :  {card.shortDescription}</p>
 
                     <div className="flex justify-between items-center text-sm mb-4">
                         <p className=" flex items-center gap-1"><span className="font-semibold">Customization</span> <CiEdit></CiEdit> : {card.customization}</p>
@@ -75,11 +75,12 @@ const MyItemCard = ({ card }) => {
                     <div className="flex gap-3 items-center grow">
 
 
-                        <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded ">
+                        <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold
+                         py-2 px-3 rounded ">
                             <Link to={`/update/${card._id}`} className="flex items-center gap-1"><span>Update</span> <MdDeleteForever></MdDeleteForever></Link>
                         </button>
 
-                        <button onClick={() => handleDelete(card._id)} className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded flex items-center gap-1">
+                        <button onClick={() => handleDelete(card._id)} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-3 rounded flex items-center gap-1">
                             <span>Delete</span> <MdDeleteForever></MdDeleteForever>
                         </button>
                     </div>

@@ -35,8 +35,8 @@ const Nav = () => {
                 <NavLink
                     className={({ isActive }) =>
                         isActive
-                        ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
-                        : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
+                            ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
+                            : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
                     }
                     to="/allCraft"
                 >
@@ -48,8 +48,8 @@ const Nav = () => {
                 <NavLink
                     className={({ isActive }) =>
                         isActive
-                        ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
-                        : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
+                            ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
+                            : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
                     }
                     to="/addItem"
                 >
@@ -61,8 +61,8 @@ const Nav = () => {
                 <NavLink
                     className={({ isActive }) =>
                         isActive
-                        ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
-                        : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
+                            ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
+                            : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
                     }
                     to="/myList"
                 >
@@ -74,8 +74,8 @@ const Nav = () => {
                 <NavLink
                     className={({ isActive }) =>
                         isActive
-                        ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
-                        : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
+                            ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
+                            : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
                     }
                     to="/about"
                 >
@@ -87,8 +87,8 @@ const Nav = () => {
                 <NavLink
                     className={({ isActive }) =>
                         isActive
-                        ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
-                        : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
+                            ? "md:text-lg text-[12px] p-1 text-red-500 md:font-bold"
+                            : "md:text-lg text-[12px] p-1 md:font-bold  hover:ease-in duration-300 hover:text-red-500"
                     }
                     to="/contact"
                 >
@@ -99,7 +99,7 @@ const Nav = () => {
     );
 
     return (
-        <div className=" flex items-center p-3 md:p-5 sticky top-0  z-10 backdrop-blur-md shadow-lg">
+        <div className=" flex items-center p-3 md:p-5 sticky top-0  z-10 backdrop-blur-xl">
             <div className="navbar-start items-center lg:justify-start justify-between flex w-full md:w-[50%]">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className=" lg:hidden">
@@ -120,7 +120,7 @@ const Nav = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="md:backdrop-blur-md backdrop-blur-xl bg-[#ebebebd1] dropdown-content md:mt-7 mt-5 p-1 px-2 space-y-2 w-screen md:w-[99vw] ml-[-15px] gap-2 nav font-bold md:ml-[-20px]"
+                        className="backdrop-blur-md bg-[#ebebebd1] dropdown-content md:mt-6 mt-[16px] p-1 px-2 space-y-2 w-[100vw] ml-[-15px] gap-2 nav font-bold md:ml-[-20px]"
                     >
                         {links}
                     </ul>
@@ -157,12 +157,12 @@ const Nav = () => {
 
                         <div className="md:hidden dropdown dropdown-bottom dropdown-end">
                             <div tabIndex={0} role="button" className="flex justify-center items-center gap-1"><span><BiSolidUserPlus size={30}></BiSolidUserPlus></span></div>
-                            <ul tabIndex={0} className="dropdown-content z-[1] menu shadow bg-base-100  w-52">
-                                <Link to={"/login"} className="md:hidden  font-semibold flex items-center gap-2">
+                            <ul tabIndex={0} className=" bg-[#ffffff74] dropdown-content z-[1] menu shadow mt-[17px] mr-[-12px]  w-52">
+                                <Link to={"/login"} className="md:hidden  font-semibold flex items-center gap-2 mb-3">
                                     <span> <FiUser size={0}></FiUser></span><span>Login</span>
                                 </Link>
                                 <Link to={"/register"} className="md:hidden  font-semibold flex items-center gap-2">
-                                    <span> <FiUser size={0}></FiUser></span><span>register</span>
+                                    <span> <FiUser size={0}></FiUser></span><span>Register</span>
                                 </Link>
                             </ul>
                         </div>
@@ -227,9 +227,11 @@ const Nav = () => {
                     </div>
                 ) : (
 
-                    <div className="dropdown dropdown-bottom dropdown-end ">
-                        <div tabIndex={0} role="button" className="btn text-xl font-bold flex justify-center items-center hover:bg-red-500 hover:text-white hover:ease-in duration-300"><span><BiSolidUserPlus size={30}></BiSolidUserPlus></span><span>Join US</span></div>
-                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <div className="dropdown dropdown-bottom dropdown-end backdrop-blur-xl">
+                        <div tabIndex={0} role="button" className=" px-2 py-1 rounded-sm text-xl font-bold flex justify-center items-center hover:bg-red-500 hover:text-white hover:ease-in duration-300"><span><BiSolidUserPlus size={30}></BiSolidUserPlus></span>
+                            <span className="text-lg">Join US</span>
+                        </div>
+                        <ul tabIndex={0} className="md:mt-[21px] mr-[-20px] dropdown-content z-[1] menu p-2 shadow backdrop-blur-xl bg-[#ffffff6d] w-52 ">
                             <Link
                                 to={"/login"}
                                 className=" text-lg font-semibold flex items-center gap-2"
@@ -237,7 +239,7 @@ const Nav = () => {
                                 <span>
                                     <FiUser color="#153b47" size={25}></FiUser>
                                 </span>
-                                <span className="px-3 py-1  0.5 bg-slate-50">
+                                <span className="px-3 py-1  0.5 ">
                                     Login
                                 </span>
                             </Link>
@@ -248,7 +250,7 @@ const Nav = () => {
                                 <span>
                                     <FiUser color="#153b47" size={25}></FiUser>
                                 </span>
-                                <span className="px-3 py-1  0.5 bg-slate-50">
+                                <span className="px-3 py-1  0.5 ">
                                     Register
                                 </span>
                             </Link>

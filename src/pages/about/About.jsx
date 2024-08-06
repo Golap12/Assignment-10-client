@@ -6,7 +6,7 @@ import about from "../../assets/images/about.jpg";
 
 const About = () => {
   return (
-    <div className=" p-5 mt-5">
+    <div className=" p-5 pt-5">
       <Helmet>
         <title>Gravo | About</title>
       </Helmet>
@@ -14,7 +14,7 @@ const About = () => {
       <div className="border w-1/4 mx-auto mt-3"></div>
 
 
-      <div className="flex flex-col md:flex-row justify-center p-5 mt-10 bg-[#22cbcb29]">
+      <div className="flex flex-col md:flex-row justify-center p-5 mt-10 ">
 
 
         <div className=" flex-1 flex flex-col justify-center lg:p-8 md:p-5 p-2">
@@ -69,7 +69,7 @@ const About = () => {
 
 
         <div className="flex-1">
-          <section className="p-6 bg-slate-100 rounded-xl">
+          <section className="p-6 backdrop-blur-lg rounded-xl">
             <div className="container mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3">
               <div className="flex flex-col justify-start m-2 lg:m-6">
                 <p className="text-4xl font-bold leading-none lg:text-6xl">50+</p>
